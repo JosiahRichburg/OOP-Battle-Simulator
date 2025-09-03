@@ -24,12 +24,12 @@ class Hero:
         critical = random.random() < 0.2
         if critical:
             print("Critical Hit!")
-            return random.randint(1, self.attack_power) * 2
+            return random.randint(10, self.attack_power) * 2
         miss = random.random() < 0.1
         if miss:
             print("Miss!")
             return 0
-        return random.randint(1, self.attack_power)
+        return random.randint(10, self.attack_power)
     
     def receive_damage(self, damage):
         self.health -= damage
